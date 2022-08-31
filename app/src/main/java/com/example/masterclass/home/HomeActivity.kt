@@ -1,16 +1,16 @@
-package com.example.masterclass
+package com.example.masterclass.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.masterclass.databinding.ActivityMainBinding
+import com.example.masterclass.databinding.ActivityHomeBinding
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupClickListeners()
