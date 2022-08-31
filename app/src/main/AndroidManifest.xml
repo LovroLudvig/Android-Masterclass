@@ -3,6 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.masterclass">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".core.App"
         android:allowBackup="true"
@@ -12,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidMasterclass">
         <activity
-            android:name=".home.HomeActivity"
+            android:name=".articleList.ArticleListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
