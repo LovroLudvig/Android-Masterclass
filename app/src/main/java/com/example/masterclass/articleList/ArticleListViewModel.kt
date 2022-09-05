@@ -20,8 +20,6 @@ class ArticleListViewModel @Inject constructor(
 
     fun requestArticles() {
         viewModelScope.launch {
-            // TODO remove this delay (This is only for demonstration to make loading longer)
-            delay(2000)
             val articles = homeRepository.getArticles()
             _state.value = ArticleListState(
                 isLoading = false,

@@ -10,12 +10,14 @@ data class ArticlesResultResource(
 data class ArticleResource(
     @field:Json(name = "title") val title: String?,
     @field:Json(name = "description") val description: String?,
+    @field:Json(name = "urlToImage") val imageUrl: String?,
 ) {
 
     fun toArticle(): Article {
         return Article(
-            title = this.title.orEmpty(),
-            description = this.description.orEmpty(),
+            title = title.orEmpty(),
+            description = description.orEmpty(),
+            imageUrl = imageUrl.orEmpty(),
         )
     }
 }

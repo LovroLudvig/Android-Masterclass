@@ -3,6 +3,7 @@ package com.example.masterclass.articleList
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.masterclass.articleList.model.Article
 import com.example.masterclass.databinding.ArticleItemBinding
 
@@ -35,6 +36,11 @@ class ArticlesAdapter(
                 title.text = article.title
                 description.text = article.description
                 root.setOnClickListener { onClick(article) }
+                Glide
+                    .with(binding.root.context)
+                    .load(article.imageUrl)
+                    .centerCrop()
+                    .into(image)
             }
         }
     }
